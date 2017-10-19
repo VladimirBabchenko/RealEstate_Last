@@ -1,0 +1,53 @@
+.adverts {
+    padding: 20px 0 30px 0;
+}
+
+.adverts__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .card {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border: transparent;
+
+        .card-body {
+            position: relative;
+            background-color: #4f8fb7;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            color: #fff;
+            padding-top: 12px;
+            padding-bottom: 12px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 40px;
+                height: 35px;
+                background: url("../img/sprite.png") -15px -167px no-repeat;
+                right: 25px;
+                top: 22px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .adverts__wrapper {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .adverts__wrapper .card {
+        margin-right: 0;
+    }
+
+    .adverts {
+        padding-bottom: 17px;
+    }
+}

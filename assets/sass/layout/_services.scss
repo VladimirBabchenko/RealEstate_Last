@@ -1,0 +1,76 @@
+.services {
+    padding-bottom: 22px;
+    background-color: #d6f8f5;
+}
+
+.services__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 24px 10px 18px 10px;
+
+    article {
+        flex-grow: 1;
+        flex-basis: 250px;
+
+        &:nth-of-type(2) {
+            margin: 0 45px;
+        }
+
+        h2 {
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 45px;
+            font-size: 22px;
+            line-height: 1;
+            color: #4484ad;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 32px;
+                height: 31px;
+                background: url("../img/sprite.png") -17px -22px no-repeat;
+                left: 0;
+                bottom: 0;
+            }
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 22px;
+            color: #43515a;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .services__wrapper article {
+        flex-basis: 45%;
+    }
+
+    .services__wrapper article:nth-of-type(2) {
+        margin-left: 45px;
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+}
+@media (max-width: 767px) {
+    .services {
+        padding-bottom: 0;
+    }
+
+    .services__wrapper {
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 575px) {
+    .services__wrapper article {
+        flex-basis: 100%;
+        margin-bottom: 25px;
+    }
+
+    .services__wrapper article:nth-of-type(2) {
+        margin-left: 0;
+    }
+}

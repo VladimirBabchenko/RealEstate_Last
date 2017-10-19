@@ -1,0 +1,170 @@
+.page-footer {
+	padding: 15px 0 45px 0;
+	background-color: #4b7d9b;
+
+	h4 {
+		font-size: 16px;
+		line-height: 33px;
+		color: #fff;
+		text-transform: uppercase;
+	}
+
+	a, p {
+		color: #fff;
+		font-size: 13px;
+		line-height: 22px;
+	}
+}
+
+.page-footer__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.footer__about {
+		flex-basis: 115px;
+	}
+
+	.footer__proparties {
+		flex-basis: 95px;
+	}
+
+	.footer__costamer {
+		flex-basis: 327px;
+
+		p {
+			&:nth-of-type(2),
+			&:nth-of-type(3) {
+				font-weight: bold;
+			}
+		}
+
+		h4 {
+			display: flex;
+			align-items: baseline;
+		}
+
+		span {
+			position: relative;
+			width: 19px;
+			height: 19px;
+			border-radius: 19px;
+			font-size: 0;
+			background-color: #6f97af;
+
+			&::after,
+			&::before {
+				content: "";
+				position: absolute;
+				width: 8px;
+				height: 2px;
+				background-color: #4b7d9b;
+				transform: rotate(45deg);
+			}
+
+			&:first-child {
+				margin-left: 14px;
+
+				&:before {
+					top: 11px;
+    				left: 5px;
+				}
+
+				&:after {
+					transform: rotate(-45deg);
+					top: 6px;
+				    left: 5px;
+				}
+			}
+
+			&:last-child {
+				margin-left: 10px;
+
+				&:before {
+					transform: rotate(-45deg);
+					top: 11px;
+    				left: 5px;
+				}
+
+				&:after {
+					top: 6px;
+				    left: 5px;
+				}
+			}
+		}
+	}
+
+	.footer__logo {
+		flex-basis: 180px;
+		align-self: center;
+
+		p {
+			margin-left: 22px;
+		}
+	}
+
+	.footer__about,
+	.footer__proparties,
+	.footer__costamer,
+	.footer__logo {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.footer__logo .page-header__logo {
+	
+	&:before {
+    	width: 48px;
+    	height: 50px;
+    	background-size: 75%;
+    	background-repeat: no-repeat;
+    	left: 6px;
+    	top: 3px;
+	}
+
+	span {
+		font-size: 17px;
+		margin-bottom: 30px;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+@media (max-width: 991px) {
+	.page-footer__wrapper .footer__logo {
+		order: 4;
+		flex-basis: 100%;
+		margin-top: 10px;
+		flex-direction: row;
+		align-items: baseline;
+		justify-content: center;
+
+		span {
+			margin-bottom: 15px;
+		}
+	}
+
+	.page-footer {
+    	padding-bottom: 0;
+    	background-color: #4b7d9b;
+	}
+}
+
+@media (max-width: 767px) {
+	.page-footer__wrapper {
+		justify-content: space-around;
+	}
+
+	.page-footer__wrapper .footer__costamer {
+    	flex-basis: 100%;
+    	align-items: center;
+    	margin-top: 20px;
+	}
+
+	.page-footer .page-header__logo {
+		margin-top: 0;
+	}
+}
